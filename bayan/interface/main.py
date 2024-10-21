@@ -3,7 +3,7 @@ import speech_recognition as sr
 from PIL import Image
 
 # Load and display the logo at the top of the app
-logo = Image.open("image/Bayan_Interface_.png")  # Replace with the path to your logo file
+logo = Image.open("image/Bayan_Interface_tp.png")  # Replace with the path to your logo file
 st.image(logo, width=200)  # Adjust the width as needed
 
 # Custom CSS for styling to match the Bayan PDF
