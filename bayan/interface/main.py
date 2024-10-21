@@ -89,7 +89,7 @@ if not st.session_state.start_page:
     uploaded_file = st.file_uploader("Choose an audio file", type=["wav", "mp3"])
 
     # Set your OpenAI API key directly (use environment variable or secret management in production)
-    openai.api_key = "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"  # Direct assignment for testing only
+    openai.api_key = ""  # Direct assignment for testing only
 
     # Function to transcribe audio using OpenAI's Whisper
     def transcribe_audio(file):
