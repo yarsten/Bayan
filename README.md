@@ -20,9 +20,10 @@ You can access the demo of the Bayan platform [Here](#)
 
 **Note: we need to specify the steps more later**
 
-Step 1: Upload an Arabic audio file or record your voice.
-Step 2: The model will transcribe your speech into text.
-Step 3: View and download the transcription in multiple formats.
+- **Step 1:** Upload an Arabic audio file or record your voice.
+- **Step 2:** The model will transcribe your speech into text.
+- **Step 3:** View and download the transcription in multiple formats.
+
 Here’s a preview of the platform:
 
 **Note: Here we need to upload an image for the interface, plz don't forget**
