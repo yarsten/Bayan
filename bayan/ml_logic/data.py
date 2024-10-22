@@ -4,7 +4,7 @@ from datasets import load_dataset, Audio
 
 def load_datasets():
     # Load AR dataset
-    ar_data_dir = '/kaggle/input/data-ar/AR'
+    ar_data_dir = '/data-ar/AR'
     newar_data = []
 
     for file_name in os.listdir(ar_data_dir):
@@ -13,7 +13,7 @@ def load_datasets():
             wav_path = os.path.join(ar_data_dir, file_name)
             txt_path = os.path.join(ar_data_dir, f"{base_name}.txt")
             with open(txt_path, 'r', encoding='utf-8') as f:
-                sentence = f.read().strip()  
+                sentence = f.read().strip()
             newar_data.append({
                 'Audio Path': wav_path,
                 'Sentence': sentence
@@ -28,11 +28,11 @@ def load_datasets():
 
     selected_data = []
     for sample in commonvoice_eval:
-        audio_array = sample['audio']['array']  
-        sampling_rate = sample['audio']['sampling_rate']  
+        audio_array = sample['audio']['array']
+        sampling_rate = sample['audio']['sampling_rate']
         selected_data.append({
-            'Audio Path': sample['audio']['path'], 
-            'Sentence': sample.get('sentence', None)  
+            'Audio Path': sample['audio']['path'],
+            'Sentence': sample.get('sentence', None)
         })
 
     df_selected = pd.DataFrame(selected_data)
@@ -41,7 +41,7 @@ def load_datasets():
     df_combined = pd.concat([df_selected, df_ar_data], ignore_index=True)
 
     # Load SADA dataset
-    sada_data_dir = '/kaggle/input/sada2022'
+    sada_data_dir = '/sada2022'
     train_df = pd.read_csv(os.path.join(sada_data_dir, 'train.csv'))
     test_df = pd.read_csv(os.path.join(sada_data_dir, 'test.csv'))
     valid_df = pd.read_csv(os.path.join(sada_data_dir, 'valid.csv'))
@@ -53,7 +53,7 @@ def load_datasets():
     df_sada_selected.reset_index(drop=True, inplace=True)
     df_sada_selected['Index'] = df_sada_selected.index
 
-    directory_path = '/kaggle/input/new-sada-roaa/new_sada'
+    directory_path = 'new_sada'
 
     filenames = os.listdir(directory_path)
 
@@ -63,7 +63,7 @@ def load_datasets():
 
     df_filenames['Index'] = df_filenames['Audio Path'].apply(lambda x: int(x.split('/')[-1].split('_')[0]))
 
-    df_filenames.head() 
+    df_filenames.head()
 
     df_sada_selected['Index'] = df_sada_selected['Index'].astype(int)
 
@@ -75,4 +75,3 @@ def load_datasets():
     Final_df = pd.concat([df_combined, merged_df], ignore_index=True)
 
     return Final_df
-
