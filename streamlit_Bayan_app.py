@@ -9,7 +9,7 @@ import openai
 from st_audiorec import st_audiorec
 
 # Load and display the logo at the top of the app
-logo = Image.open("/home/yara/code/yarsten/Bayan/bayan/interface/image/Bayan_Interface_tp.png")
+logo = Image.open("Bayan/bayan/interface/image/Bayan_Interface_tp.png")
 st.image(logo, width=400)
 
 # Custom CSS for styling
