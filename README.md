@@ -22,10 +22,6 @@ You can access the demo of the Bayan platform [Here](https://bayan-speech2text.s
 - **Step 2:** The model will transcribe your speech into text.
 - **Step 3:** View and download the transcription in multiple formats.
 
-Here’s a preview of the platform:
-
-<img src="https://i.ibb.co/27rFr5s/image-name.jpg" alt="Alt Text" width="250"/>
-
 
 ## Model Selection
 We implemented two main models: **Whisper** and **LSTM**.
