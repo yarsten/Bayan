@@ -6,11 +6,8 @@ from PIL import Image
 import openai
 from st_audiorec import st_audiorec
 
-# Load and display the logo at the top of the app
-base_dir = os.path.join(os.path.expanduser('~'), 'code', 'yarsten', 'Bayan')
-
 # Construct the path to the image file
-image_path = os.path.join(base_dir, "bayan", "interface", "image", "Bayan_Interface_tp.png")
+image_path = os.path.join("bayan", "interface", "image", "Bayan_Interface_tp.png")
 
 # Open the image
 logo = Image.open(image_path)
