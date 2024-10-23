@@ -84,7 +84,7 @@ LSTM	94
 ## Learning Curve
 Here’s a preview of the learning curve for the model training:
 
-<img src="bayan/interface/image/learning_curve.png" alt="learning curve" width="600" height="400">
+<img src="https://cdn.discordapp.com/attachments/1295421459975376916/1298062045593473044/image.png?ex=6719837c&is=671831fc&hm=7f8321615b775b972468aa3dfee69e7e7669e19197fb4eb8c7d165b9bd691dc0&" alt="Bayan Logo" width="400"/>
 
 ## Challenges
 During the implementation of this project, we encountered numerous challenges primarily stemming from the scarcity of machine learning and deep learning resources in the Arabic language domain. The task was further complicated by the necessity to train the model on Arabic language sounds, which presented its own set of difficulties.
