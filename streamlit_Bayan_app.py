@@ -34,8 +34,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title and introduction
-st.title("Bayan")
-st.write("Welcome To Bayan!")
+st.title("You speak, We transcribe!")
 
 page = st.sidebar.radio("Go to", ["Upload Audio", "Real-Time Speech-to-Text"])
 
