@@ -37,8 +37,6 @@ st.markdown("""
 st.title("Bayan")
 st.write("Welcome To Bayan!")
 
-# Sidebar for navigation
-st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Upload Audio", "Real-Time Speech-to-Text"])
 
 # Set up OpenAI API key
@@ -96,6 +94,19 @@ elif page == "Real-Time Speech-to-Text":
 
 # Footer on both pages
 st.sidebar.markdown("""
-**Bayan**: A speech-to-text software designed for the Arabic language using OpenAI Whisper.
-Bringing clarity to communication through Arabic Speech-to-Text.
-""")
+    <style>
+    .footer-box {
+        background-color: #001f3f;
+        border: 2px solid #68bdb2;
+        border-radius: 15px;
+        padding: 15px;
+        color: #68bdb2;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+    </style>
+    <div class="footer-box">
+        <strong>Bayan</strong>: A speech-to-text software designed for the Arabic language using OpenAI Whisper.
+        Bringing clarity to communication through Arabic Speech-to-Text.
+    </div>
+""", unsafe_allow_html=True)
